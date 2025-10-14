@@ -1,0 +1,16 @@
+spring:
+  application:
+   name: config_server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+            # The config files are stored in `src/main/resources/config`
+            - classpath:/config
+  profiles:
+    active: native
+
+
+server:
+  port: 8083
