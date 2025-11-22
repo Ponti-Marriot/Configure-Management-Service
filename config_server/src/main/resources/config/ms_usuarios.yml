@@ -1,13 +1,11 @@
 spring:
   cloud:
-    function:
-      definition: empleadoConsumer
     stream:
       kafka:
         binder:
           brokers: localhost:9092
       bindings:
-        #Publishers
+        # Publishers
         sendEmpleado-out-0:
           destination: consumerNuevoEmpleado
        
