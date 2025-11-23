@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ponti_marriott
-    username: admin
-    password: admin123
+    url: http://rabbit-5432.7tt.aws-us-east-1.cockroachlabs.cloud:26257/ponti-marriot
+    username: ponti-marriot
+    password: jdbc:postgresql://droll-rabbit-5432.7tt.aws-us-east-1.cockroachlabs.cloud:26257/ponti-marriot?sslmode=verify-full&sslrootcert=src/main/resources/certificate/root.crt
     driver-class-name: org.postgresql.Driver
 
   jpa:
