@@ -1,6 +1,9 @@
 spring:
   cloud:
     stream:
+      kafka:
+        binder:
+          brokers: 10.43.103.234:9092
       bindings:
 
         reservationCreated-in-0:
