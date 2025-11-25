@@ -1,0 +1,15 @@
+spring:
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+
+keycloak:
+  login-url: http://localhost:9000/realms/myrealm/protocol/openid-connect/token
+  register-url: http://localhost:9000/admin/realms/myrealm/users
+
+server:
+  port: 8088
