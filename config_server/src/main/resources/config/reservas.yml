@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: reservas
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+
+        reservationCreated-out-0:
+          destination: reservation-created-topic
+
+        reservationConfirmed-out-0:
+          destination: reservation-confirmed-topic
+
+        reservationCancelled-out-0:
+          destination: reservation-cancelled-topic
+
+        reservationRejected-out-0:
+          destination: reservation-rejected-topic
+
+server:
+  port: 8081
+
+dbclient:
+  base-url: http://localhost:8082
+
+properties:
+  client:
+    base-url: http://localhost:8082
+
+logging:
+  level:
+    com.pontimarriot.reservas: INFO
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
