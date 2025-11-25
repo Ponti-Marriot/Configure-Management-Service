@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+
+        reservationCreated-in-0:
+          destination: reservation-created-topic
+
+        reservationConfirmed-in-0:
+          destination: reservation-confirmed-topic
+
+        reservationCancelled-in-0:
+          destination: reservation-cancelled-topic
+
+        reservationRejected-in-0:
+          destination: reservation-rejected-topic
+
+
+server:
+  port: 8085
