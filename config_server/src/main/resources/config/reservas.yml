@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: reservas
+
+server:
+  port: 8081
+
+dbclient:
+  base-url: http://localhost:8082
+
+properties:
+  client:
+    base-url: http://localhost:8082
+
+logging:
+  level:
+    com.pontimarriot.reservas: INFO
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
